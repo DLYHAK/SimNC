@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIMILIA QA Search</title>
+    <meta name="description" content="SIMILIA QA search interface" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="topbar">
+        <div>
+          <h1>Similar NC Search</h1>
+          <p class="subtitle">Recherche de NC similaire</p>
+        </div>
+        <div class="toolbar" role="group" aria-label="Language switcher">
+          <button class="lang-btn is-active" data-lang="fr" type="button">FR</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+        </div>
+      </header>
+
+      <section class="surface input-panel">
+        <h2 class="section-title" data-i18n="inputSection"></h2>
+
+        <label class="field-label" for="issueInput" data-i18n="issueLabel"></label>
+        <textarea id="issueInput" class="textarea" rows="4"></textarea>
+
+        <label class="field-label" for="partInput" data-i18n="partLabel"></label>
+        <input id="partInput" class="input" type="text" />
+
+        <div class="examples-row">
+          <span class="examples-label" data-i18n="examplesLabel"></span>
+          <button class="ghost-btn" id="example1Btn" type="button"></button>
+          <button class="ghost-btn" id="example2Btn" type="button"></button>
+        </div>
+
+        <div class="actions-row">
+          <button id="runBtn" class="primary-btn" type="button" data-i18n="runButton"></button>
+        </div>
+
+        <p class="inline-note" id="statusLine" aria-live="polite"></p>
+      </section>
+
+      <section id="loading" class="surface loading-panel" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p data-i18n="loadingText"></p>
+      </section>
+
+      <section class="results-grid" id="results" hidden>
+        <article class="surface card card-wide">
+          <h3 class="card-title" data-i18n="similarTitle"></h3>
+          <div class="table-wrap">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th data-i18n="colRank"></th>
+                  <th data-i18n="colId"></th>
+                  <th data-i18n="colScore"></th>
+                  <th data-i18n="colComment"></th>
+                  <th data-i18n="colCurative"></th>
+                </tr>
+              </thead>
+              <tbody id="similarTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

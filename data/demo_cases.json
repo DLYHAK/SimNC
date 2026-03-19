@@ -1,0 +1,106 @@
+{
+  "cases": [
+    {
+      "id": "case-paint-thickness",
+      "input": {
+        "fr": "Epaisseur de peinture non conforme",
+        "en": "Paint thickness out of specification"
+      },
+      "diagnosis": {
+        "fr": "Derive du procede d'application peinture conduisant a une epaisseur hors plage sur zone fonctionnelle.",
+        "en": "Paint application process drift causing thickness outside allowable range on a functional area."
+      },
+      "actions": [
+        {
+          "fr": "Verifier l'etat de calibration du pistolet et confirmer les parametres de pulverisation (pression, debit, distance).",
+          "en": "Check spray gun calibration status and confirm spraying parameters (pressure, flow rate, stand-off distance)."
+        },
+        {
+          "fr": "Revoir la preparation de surface et le temps d'evaporation entre couches avant reprise peinture.",
+          "en": "Review surface preparation and flash-off time between coats before repainting."
+        },
+        {
+          "fr": "Renforcer le plan de controle epaisseur sur les 5 prochaines pieces avec validation premiere piece.",
+          "en": "Tighten thickness control plan on the next 5 parts with first-article validation."
+        }
+      ],
+      "similar": [
+        {
+          "record_id": "51234",
+          "score": 0.93,
+          "text": {
+            "fr": "Sur-epaisseur peinture constatee apres retouche locale",
+            "en": "Paint over-thickness detected after local rework"
+          }
+        },
+        {
+          "record_id": "49811",
+          "score": 0.88,
+          "text": {
+            "fr": "Epaisseur coating hors tol sur zone de fixation",
+            "en": "Coating thickness out of tolerance on fastening area"
+          }
+        },
+        {
+          "record_id": "47602",
+          "score": 0.84,
+          "text": {
+            "fr": "Variation d'epaisseur liee au reglage de buse",
+            "en": "Thickness variation linked to nozzle setting"
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-length-tolerance",
+      "input": {
+        "fr": "longueur hors tolérance",
+        "en": "Length out of tolerance"
+      },
+      "diagnosis": {
+        "fr": "Deviation dimensionnelle en usinage final, probablement liee a un decalage d'offset outil ou a une derive thermique.",
+        "en": "Dimensional deviation at final machining stage, likely linked to tool offset drift or thermal effect."
+      },
+      "actions": [
+        {
+          "fr": "Confirmer la reference de prise d'origine et realiser un controle offset outil avant relance serie.",
+          "en": "Confirm datum setup and perform tool offset verification before restarting production."
+        },
+        {
+          "fr": "Isoler le lot impacte et effectuer un controle dimensionnel 100% sur la cote longueur critique.",
+          "en": "Contain impacted batch and perform 100% dimensional check on the critical length characteristic."
+        },
+        {
+          "fr": "Mettre a jour l'instruction de reglage machine avec un point de verification intermediaire.",
+          "en": "Update machine setup instruction with an intermediate verification checkpoint."
+        }
+      ],
+      "similar": [
+        {
+          "record_id": "53319",
+          "score": 0.91,
+          "text": {
+            "fr": "Cote de longueur finale depassee apres changement d'outil",
+            "en": "Final length characteristic exceeded after tool change"
+          }
+        },
+        {
+          "record_id": "50567",
+          "score": 0.87,
+          "text": {
+            "fr": "Longueur non conforme en sortie usinage CN",
+            "en": "Length non-conformity at CNC machining output"
+          }
+        },
+        {
+          "record_id": "48902",
+          "score": 0.83,
+          "text": {
+            "fr": "Derive progressive de cote sur serie longue",
+            "en": "Progressive dimensional drift over long production run"
+          }
+        }
+      ]
+    }
+  ]
+}
